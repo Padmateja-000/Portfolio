@@ -1,0 +1,528 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio | Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+    <!-- Starfield/Glow Background Elements -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-[100px] animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animation-delay-2000"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Welcome to my universe</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                    Hi, I'm <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Padma Teja</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-slate-300 font-medium mb-8 flex items-center">
+                    <span class="typing-text border-r-2 border-accent pr-1">SysAdmin & Cyber Security Enthusiast</span>
+                </h2>
+                <p class="text-slate-400 text-lg mb-10 max-w-lg leading-relaxed">
+                    Passionate about System Administration, Cyber Security, and building effective automation solutions. Currently pursuing my B.Tech in CSE.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-8 py-3 rounded-full bg-accent text-white font-medium hover:bg-accentHover hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] hover:-translate-y-1 transition-all duration-300">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 rounded-full border border-slate-600 text-slate-300 font-medium hover:border-accent hover:text-white hover:bg-accent/10 transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image/3D Element Content -->
+            <div class="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="relative w-80 h-80 md:w-96 md:h-96 hero-image-container group">
+                    <!-- Glow behind image -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-accent to-purple-600 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                    
+                    <!-- The actual profile pic border/container -->
+                    <div class="relative w-full h-full rounded-full border-2 border-accent/50 p-2 overflow-hidden bg-dark transform transition-transform duration-700 hover:scale-105 group-hover:border-accent">
+                        <!-- Try to load a real image via model or fallback to a placeholder -->
+                        <img src="https://ui-avatars.com/api/?name=Padma+Teja&size=512&background=0f172a&color=3b82f6" alt="Profile Picture" class="w-full h-full object-cover rounded-full mix-blend-lighten grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+
+                    <!-- Orbiting Elements -->
+                    <div class="absolute top-0 -left-4 w-12 h-12 bg-dark border border-slate-700 rounded-full flex items-center justify-center text-accent text-xl shadow-[0_0_15px_rgba(59,130,246,0.3)] animate-bounce" style="animation-duration: 3s;">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="absolute bottom-10 -right-4 w-14 h-14 bg-dark border border-slate-700 rounded-full flex items-center justify-center text-[#61DAFB] text-2xl shadow-[0_0_15px_rgba(97,218,251,0.3)] animate-pulse" style="animation-duration: 4s;">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="absolute -top-4 right-10 w-10 h-10 bg-dark border border-slate-700 rounded-full flex items-center justify-center text-[#F7DF1E] text-lg shadow-[0_0_15px_rgba(247,223,30,0.3)] float-anim">
+                        <i class="fab fa-js"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-slate-500 hover:text-accent transition-colors animate-bounce">
+        <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                About Me
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-accent rounded"></span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <div class="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Working on code" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h3 class="text-2xl font-bold text-white mb-4">System Administrator & Developer</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    Hello! My name is Padma Teja. I am a determined and adaptable technologist currently pursuing my B.Tech in Computer Science and Engineering at Lovely Professional University.
+                </p>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    My training encompasses Red Hat Linux system administration, network security, and custom shell scripting. From building a Linux System Automation toolkit to ranking top 5% on TryHackMe globally, I'm passionate about securing and optimizing systems logic.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 text-slate-300">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> Linux (RedHat, Kali)
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> Python & Bash
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> C & C++
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> Nmap & Metasploit
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> Java
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-accent text-xs"></i> MySQL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section with CSS 3D Hover Effects -->
+<section id="skills" class="py-24 bg-darker relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                My Skills
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-accent rounded"></span>
+            </h2>
+            <p class="text-slate-400 mt-4">Technologies I work with every day</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {% for skill in skills %}
+            <div data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:'0' }}00">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 transform-gpu h-full group">
+                    <i class="{{ skill.icon_class|default:'fas fa-code' }} text-4xl text-slate-400 group-hover:text-accent group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium text-center">{{ skill.name }}</h4>
+                    
+                    <!-- Progress Bar (Subtle) -->
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2 overflow-hidden">
+                        <div class="bg-gradient-to-r from-accent to-purple-500 h-1.5 rounded-full" style="width: {{ skill.proficiency }}%"></div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <!-- Placeholder Skills if DB is empty -->
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fab fa-python text-4xl text-slate-400 group-hover:text-[#3776AB] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">Django</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[90%]"></div></div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fab fa-js text-4xl text-slate-400 group-hover:text-[#F7DF1E] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">JavaScript</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[85%]"></div></div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fab fa-react text-4xl text-slate-400 group-hover:text-[#61DAFB] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">React</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[80%]"></div></div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="400">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fab fa-css3-alt text-4xl text-slate-400 group-hover:text-[#1572B6] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">Tailwind</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[95%]"></div></div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fas fa-database text-4xl text-slate-400 group-hover:text-[#336791] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">PostgreSQL</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[75%]"></div></div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="600">
+                <div class="skill-card bg-dark border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full group">
+                    <i class="fab fa-docker text-4xl text-slate-400 group-hover:text-[#2496ED] group-hover:-translate-y-2 transition-all duration-300"></i>
+                    <h4 class="text-white font-medium">Docker</h4>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2"><div class="bg-accent h-1.5 rounded-full w-[70%]"></div></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                Featured Projects
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-accent rounded"></span>
+            </h2>
+            <p class="text-slate-400 mt-4">Some things I've built recently</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
+            {% for project in projects %}
+            <!-- 3D Tilt Card -->
+            <div class="project-card-wrapper" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'0' }}00">
+                <div class="project-card bg-darker rounded-2xl overflow-hidden border border-slate-800 h-full flex flex-col transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:border-accent/50 transform-gpu preserve-3d">
+                    
+                    <div class="relative h-48 overflow-hidden group">
+                        <a href="{{ project.github_link }}" target="_blank" class="block w-full h-full">
+                            {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            {% else %}
+                            <div class="w-full h-full bg-gradient-to-br from-slate-800 to-dark flex items-center justify-center">
+                                <i class="fas fa-image text-4xl text-slate-600"></i>
+                            </div>
+                            {% endif %}
+                        </a>
+                        <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-white">
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Area -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            <a href="{{ project.github_link }}" target="_blank" class="hover:text-accent transition-colors">{{ project.title }}</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow line-clamp-3">{{ project.description }}</p>
+                        
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-800">
+                            <!-- Splitting string manually in template might require a custom tag, but we'll use CSS to style instead. 
+                                 Assuming technologies are comma-separated strings -->
+                            <span class="text-xs font-mono text-accent">{{ project.technologies }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <!-- Placeholder Projects -->
+            <div class="project-card-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card bg-darker rounded-2xl overflow-hidden border border-slate-800 h-full flex flex-col transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:-translate-y-2 transform-gpu">
+                    <div class="relative h-48 overflow-hidden bg-slate-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">E-Commerce Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4">A full-stack e-commerce application with Stripe payment integration, cart functionality, and admin dashboard.</p>
+                        <span class="text-xs font-mono text-accent">Django, React, Tailwind, PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card bg-darker rounded-2xl overflow-hidden border border-slate-800 h-full flex flex-col transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:-translate-y-2 transform-gpu">
+                    <div class="relative h-48 overflow-hidden bg-slate-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Task Management API</h3>
+                        <p class="text-slate-400 text-sm mb-4">RESTful API built with Django REST Framework featuring JWT authentication and role-based access control.</p>
+                        <span class="text-xs font-mono text-accent">DRF, Python, Docker, Swagger</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-wrapper" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card bg-darker rounded-2xl overflow-hidden border border-slate-800 h-full flex flex-col transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)] hover:-translate-y-2 transform-gpu">
+                    <div class="relative h-48 overflow-hidden bg-slate-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Real-time Chat App</h3>
+                        <p class="text-slate-400 text-sm mb-4">WebSockets based real-time chat application with private messaging and typing indicators.</p>
+                        <span class="text-xs font-mono text-accent">Django Channels, Redis, JS</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="mt-12 text-center" data-aos="fade-up">
+            <a href="https://github.com/Padmateja-000/" target="_blank" class="inline-block px-6 py-3 rounded-full border border-slate-700 text-slate-300 hover:border-accent hover:text-white transition-all duration-300">
+                View more on GitHub <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Combined Experience, Education, Training Section -->
+<section id="resume" class="py-24 bg-darker relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-900/50 -skew-x-12 origin-top transform translate-x-20 z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                My Resume
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-accent rounded"></span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Left Column: Education & Training -->
+            <div>
+                <h3 class="text-2xl font-semibold text-white mb-8 flex items-center gap-3" data-aos="fade-up">
+                    <i class="fas fa-graduation-cap text-accent"></i> Education & Training
+                </h3>
+                
+                <div class="relative border-l-2 border-slate-800 ml-3 pl-8 pb-4 space-y-10">
+                    
+                    {% for edu in educations %}
+                    <div class="relative timeline-item" data-aos="fade-up">
+                        <div class="absolute -left-[41px] bg-darker p-1">
+                            <div class="w-4 h-4 rounded-full bg-accent border-4 border-darker shadow-[0_0_10px_#3b82f6]"></div>
+                        </div>
+                        <div class="bg-dark/80 backdrop-blur-sm border border-slate-800 rounded-xl p-6 hover:border-slate-600 transition-colors">
+                            <span class="text-sm font-medium text-accent block mb-1">
+                                {{ edu.start_date|date:"Y" }} - {% if edu.end_date %}{{ edu.end_date|date:"Y" }}{% else %}Present{% endif %}
+                            </span>
+                            <h4 class="text-xl font-bold text-white">{{ edu.degree }}</h4>
+                            <span class="text-slate-400 block mb-3 text-sm">{{ edu.institution }}</span>
+                            {% if edu.description %}
+                            <p class="text-slate-500 text-sm leading-relaxed">{{ edu.description }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <!-- Dummy Education -->
+                    <div class="relative timeline-item" data-aos="fade-up">
+                        <div class="absolute -left-[41px] bg-darker p-1">
+                            <div class="w-4 h-4 rounded-full bg-accent border-4 border-darker shadow-[0_0_10px_#3b82f6]"></div>
+                        </div>
+                        <div class="bg-dark/80 backdrop-blur-sm border border-slate-800 rounded-xl p-6">
+                            <span class="text-sm font-medium text-accent block mb-1">2016 - 2020</span>
+                            <h4 class="text-xl font-bold text-white">B.S. Computer Science</h4>
+                            <span class="text-slate-400 block mb-3 text-sm">University of Technology</span>
+                            <p class="text-slate-500 text-sm leading-relaxed">Graduated with honors. Relevant coursework: Data Structures, Algorithms, Database Systems, Web Development.</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    {% for train in trainings %}
+                    <div class="relative timeline-item" data-aos="fade-up">
+                        <div class="absolute -left-[41px] bg-darker p-1">
+                            <div class="w-4 h-4 rounded-full bg-purple-500 border-4 border-darker shadow-[0_0_10px_#a855f7]"></div>
+                        </div>
+                        <div class="bg-dark/80 backdrop-blur-sm border border-slate-800 rounded-xl p-6 hover:border-slate-600 transition-colors">
+                            <span class="text-sm font-medium text-purple-400 block mb-1">
+                                {{ train.start_date|date:"Y" }} - {% if train.end_date %}{{ train.end_date|date:"Y" }}{% else %}Present{% endif %}
+                            </span>
+                            <h4 class="text-xl font-bold text-white">{{ train.title }}</h4>
+                            <span class="text-slate-400 block mb-3 text-sm">{{ train.organization }}</span>
+                            {% if train.description %}
+                            <p class="text-slate-500 text-sm leading-relaxed">{{ train.description }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!-- Right Column: Achievements & Certificates -->
+            <div>
+                <h3 class="text-2xl font-semibold text-white mb-8 flex items-center gap-3" data-aos="fade-up">
+                    <i class="fas fa-trophy text-accent"></i> Achievements & Certificates
+                </h3>
+                
+                <div class="space-y-6">
+                    {% for cert in certificates %}
+                    <div class="bg-dark border border-slate-800 rounded-xl p-6 flex gap-4 hover:border-accent hover:bg-slate-800/50 transition-all duration-300 group" data-aos="fade-left" data-aos-delay="{{ forloop.counter|add:'0' }}00">
+                        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20">
+                            <i class="fas fa-certificate text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">{{ cert.title }}</h4>
+                            <p class="text-slate-400 text-sm mb-1">{{ cert.issuer }} • {{ cert.date_issued|date:"M Y" }}</p>
+                            {% if cert.link %}
+                            <a href="{{ cert.link }}" target="_blank" class="text-accent text-sm hover:underline flex items-center gap-1 mt-2">
+                                Verify Credential <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <!-- Dummy Certificate -->
+                    <div class="bg-dark border border-slate-800 rounded-xl p-6 flex gap-4 hover:border-accent hover:bg-slate-800/50 transition-all duration-300 group" data-aos="fade-left">
+                        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-certificate text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">AWS Certified Developer - Associate</h4>
+                            <p class="text-slate-400 text-sm mb-1">Amazon Web Services • Jan 2023</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <h4 class="text-lg font-semibold text-white mt-8 mb-4 border-b border-slate-800 pb-2" data-aos="fade-in">Notable Achievements</h4>
+                    <ul class="space-y-4">
+                        {% for achievement in achievements %}
+                        <li class="flex gap-3" data-aos="fade-up">
+                            <i class="fas fa-star text-yellow-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h5 class="text-white font-medium">{{ achievement.title }}</h5>
+                                <p class="text-slate-500 text-sm">{{ achievement.description }}</p>
+                            </div>
+                        </li>
+                        {% empty %}
+                        <li class="flex gap-3" data-aos="fade-up">
+                            <i class="fas fa-star text-yellow-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h5 class="text-white font-medium">Hackathon Winner 2022</h5>
+                                <p class="text-slate-500 text-sm">1st place out of 50 teams at City Tech Hackathon.</p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="mt-12 text-center lg:text-left" data-aos="fade-up">
+                    <a href="{% static 'resume.pdf' %}" download="Sangeetham_Padma_Teja_Resume.pdf" class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-accent/10 border border-accent text-accent font-medium hover:bg-accent hover:text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
+                        <i class="fas fa-download"></i> Download Full Resume
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                Get In Touch
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-accent rounded"></span>
+            </h2>
+            <p class="text-slate-400 mt-4 max-w-xl mx-auto">Have a project in mind or just want to say hi? Feel free to reach out. I'll try my best to get back to you!</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
+            
+            <!-- Contact Info -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Contact Card -->
+                <div class="bg-darker border border-slate-800 rounded-xl p-6 flex items-start gap-4 hover:border-accent/50 transition-colors" data-aos="fade-right" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-accent flex-shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-1">Email & Phone</h4>
+                        <a href="mailto:work.padmateja@gmail.com" class="text-slate-400 hover:text-accent transition-colors block">work.padmateja@gmail.com</a>
+                        <a href="tel:+917702526955" class="text-slate-400 mt-1 hover:text-accent transition-colors block">+91 7702526955</a>
+                    </div>
+                </div>
+                
+                <div class="bg-darker border border-slate-800 rounded-xl p-6 flex items-start gap-4 hover:border-accent/50 transition-colors" data-aos="fade-right" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-accent flex-shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-1">Location</h4>
+                        <p class="text-slate-400">Phagwara, Punjab</p>
+                    </div>
+                </div>
+
+                <div class="bg-darker border border-slate-800 rounded-xl p-6 flex items-start gap-4 hover:border-accent/50 transition-colors" data-aos="fade-right" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-accent flex-shrink-0">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-2">Socials</h4>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Padmateja-000/" target="_blank" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                            <a href="https://www.linkedin.com/in/padma-teja-sangeetham/" target="_blank" class="text-slate-400 hover:text-[#0A66C2] transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="https://tryhackme.com/p/PadmaTeja" target="_blank" class="text-slate-400 hover:text-[#1DA1F2] transition-colors"><i class="fas fa-shield-alt text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="200">
+                <form method="POST" action="{% url 'index' %}#contact" class="bg-darker border border-slate-800 rounded-2xl p-8 shadow-xl relative overflow-hidden">
+                    {% csrf_token %}
+                    <!-- Decorative corner -->
+                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-accent/10 rounded-full blur-xl"></div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors placeholder-slate-600" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors placeholder-slate-600" placeholder="guest@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="subject" class="block text-sm font-medium text-slate-400 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors placeholder-slate-600" placeholder="Project Inquiry">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-slate-400 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full bg-dark border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors placeholder-slate-600 resize-none" placeholder="Hello, I'd like to talk about..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-4 rounded-lg bg-accent hover:bg-accentHover text-white font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.23)] flex items-center justify-center gap-2">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
