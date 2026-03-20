@@ -87,7 +87,7 @@ STATICFILES_DIRS = [
 ]
 
 # Whitenoise storage for compression and caching
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media files (File uploads like Profile Pictures/CV)
 MEDIA_URL = '/media/'
